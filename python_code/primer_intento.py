@@ -61,20 +61,22 @@ def riddle_equation(coef):
     
 
 def check_coef(coef):
-
-	""" Si estos coef dan como resultado 66, devuelve un TRUE(1)"""
-	result = riddle_equation(coef)
-	if result == 66:
-		return True
-	else: return False
+    
+    """ Para coef comprobamos que el resultado de la ecuacion es 66 """
+    
+    result = riddle_equation(coef)
+    
+    if result == 66:
+        return True
+    else: 
+        return False
 
 ## MAIN
 ## ===================================================================
 
-for per in permutations(range(10)):
-    coef = list(per)
-#    print(coef)
+solutions = [] #iniciamos la lista de resultados
+for per in permutations(range(10)): 
+    coef = list(per) #TODO: per es un iterador, no lo tengo claro si puedo pasarselo a riddle_equation    
     if check_coef(coef):
-        print(coef)
-    
+        solutions.append(coef) 
 
