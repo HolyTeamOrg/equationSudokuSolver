@@ -38,24 +38,27 @@ def factorial(n):
     return prod(range(1,n+1))
 
 def riddle_equation(coef):
+       
+    """ Calculamos el resultado de esos coeficientes en la ecuacion """
 
-	""" Calculamos el resultado de esos coeficientes en la ecuacion """
-
-	eq = (coef[0] + 
-			  13 
-			  * coef[1]
-			  / coef[2]
-			  + coef[3]
-			  + 12 
-			  * coef[4] 
-			  - coef[5] 
-			  -11 
-			  + coef[6]
-			  * coef[7]
-			  / coef[8]
-			  - 10) # = 66
-	
-	return eq
+    try:
+        eq = (coef[0] + 
+    			  13 
+    			  * coef[1]
+    			  / coef[2]
+    			  + coef[3]
+    			  + 12 
+    			  * coef[4] 
+    			  - coef[5] 
+    			  -11 
+    			  + coef[6]
+    			  * coef[7]
+    			  / coef[8]
+    			  - 10) # = 66
+        return eq
+    except ZeroDivisionError:
+        return float('NaN')
+    
 
 def check_coef(coef):
 
