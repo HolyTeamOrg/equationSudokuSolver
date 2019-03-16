@@ -4,4 +4,4 @@
 
 <img src="./desafioEcuacionSudoku.jpg" width="500">
 
-Para ver solucion ir al **jupyter notebook**. 
+Para ver solucion ir al [jupyter notebook](/.jupyter/SolTebinskySolTebinski.ipynb)
