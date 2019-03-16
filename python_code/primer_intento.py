@@ -83,7 +83,7 @@ def main():
     """ Programa principal """
     
     solutions = [] #iniciamos la lista de resultados
-    for per in permutations(range(10)): 
+    for per in permutations(range(1,10)): 
         coef = list(per) #TODO: per es un iterador, no lo tengo claro si puedo pasarselo a riddle_equation    
         if check_coef(coef):
             solutions.append(coef) 
