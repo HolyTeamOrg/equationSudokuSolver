@@ -57,21 +57,21 @@ def riddle_equation(coef):
 	
 	return eq
 
-def check_coef(coef)
+def check_coef(coef):
 
 	""" Si estos coef dan como resultado 66, devuelve un TRUE(1)"""
 	result = riddle_equation(coef)
-	if result == 66
+	if result == 66:
 		return True
-	else return False
+	else: return False
 
 ## MAIN
 ## ===================================================================
 
-p = permutations(range(10))
-for per in p[0:5]:
-# coef = range(9+1)
-    coef  = per
-    print()
+for per in permutations(range(10)):
+    coef = list(per)
+#    print(coef)
+    if check_coef(coef):
+        print(coef)
     
 
