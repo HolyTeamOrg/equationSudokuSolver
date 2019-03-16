@@ -1,0 +1,77 @@
+# -*- coding: utf-8 -*-
+"""
+Vamos a solucionar el enigma propuesto en 
+https://github.com/HolyTeamOrg/equationSudokuSolver
+
+Created on Sat Mar  9 11:44:27 2019
+
+@author: TebaPC
+"""
+from numpy import prod
+from itertools import permutations
+
+
+import cProfile, pstats, io
+
+def profile(fnc):
+    
+    """A decorator that uses cProfile to profile a function"""
+    
+    def inner(*args, **kwargs):
+        
+        pr = cProfile.Profile()
+        pr.enable()
+        retval = fnc(*args, **kwargs)
+        pr.disable()
+        s = io.StringIO()
+        sortby = 'cumulative'
+        ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+        ps.print_stats()
+        print(s.getvalue())
+        return retval
+
+    return inner
+
+
+def factorial(n):
+    
+    return prod(range(1,n+1))
+
+def riddle_equation(coef):
+
+	""" Calculamos el resultado de esos coeficientes en la ecuacion """
+
+	eq = (coef[0] + 
+			  13 
+			  * coef[1]
+			  / coef[2]
+			  + coef[3]
+			  + 12 
+			  * coef[4] 
+			  - coef[5] 
+			  -11 
+			  + coef[6]
+			  * coef[7]
+			  / coef[8]
+			  - 10) # = 66
+	
+	return eq
+
+def check_coef(coef)
+
+	""" Si estos coef dan como resultado 66, devuelve un TRUE(1)"""
+	result = riddle_equation(coef)
+	if result == 66
+		return True
+	else return False
+
+## MAIN
+## ===================================================================
+
+p = permutations(range(10))
+for per in p[0:5]:
+# coef = range(9+1)
+    coef  = per
+    print()
+    
+
