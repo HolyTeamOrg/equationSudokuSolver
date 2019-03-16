@@ -71,9 +71,7 @@ def check_coef(coef):
     
     """ Para coef comprobamos que el resultado de la ecuacion es 66 """
     
-    result = riddle_equation(coef)
-    
-    if result == 66:
+    if  riddle_equation(coef) == 66:
         return True
     else: 
         return False
