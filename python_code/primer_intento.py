@@ -13,6 +13,7 @@ from itertools import permutations
 
 import cProfile, pstats, io
 
+
 def profile(fnc):
     
     """A decorator that uses cProfile to profile a function"""
@@ -28,6 +29,11 @@ def profile(fnc):
         ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
         ps.print_stats()
         print(s.getvalue())
+        
+        f = open('cProfiler_results.txt', 'w')
+        f.write(s.getvalue())
+        f.close
+        
         return retval
 
     return inner
@@ -36,6 +42,7 @@ def profile(fnc):
 def factorial(n):
     
     return prod(range(1,n+1))
+
 
 def riddle_equation(coef):
        
@@ -71,12 +78,20 @@ def check_coef(coef):
     else: 
         return False
 
+
+@profile
+def main():
+    
+    """ Programa principal """
+    
+    solutions = [] #iniciamos la lista de resultados
+    for per in permutations(range(10)): 
+        coef = list(per) #TODO: per es un iterador, no lo tengo claro si puedo pasarselo a riddle_equation    
+        if check_coef(coef):
+            solutions.append(coef) 
+    return solutions
 ## MAIN
 ## ===================================================================
+solutions = main()
 
-solutions = [] #iniciamos la lista de resultados
-for per in permutations(range(10)): 
-    coef = list(per) #TODO: per es un iterador, no lo tengo claro si puedo pasarselo a riddle_equation    
-    if check_coef(coef):
-        solutions.append(coef) 
 

@@ -1,0 +1,12 @@
+         7260446 function calls in 5.544 seconds
+
+   Ordered by: cumulative time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    1.537    1.537    5.544    5.544 C:/Users/TebaPC/Desktop/REpo de Tebinski/equationSudokuSolver/python_code/primer_intento.py:82(main)
+  3628800    0.963    0.000    4.006    0.000 C:/Users/TebaPC/Desktop/REpo de Tebinski/equationSudokuSolver/python_code/primer_intento.py:70(check_coef)
+  3628800    3.043    0.000    3.043    0.000 C:/Users/TebaPC/Desktop/REpo de Tebinski/equationSudokuSolver/python_code/primer_intento.py:47(riddle_equation)
+     2844    0.000    0.000    0.000    0.000 {method 'append' of 'list' objects}
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+
+
