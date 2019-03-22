@@ -15,6 +15,9 @@ cases = 0
 valid = 0
 t = time.time()
 
+
+# vaya tela fran 
+
 for a in nn:
     nn.remove(a)
     for b in nn:
