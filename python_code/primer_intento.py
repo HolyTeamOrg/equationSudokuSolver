@@ -5,7 +5,7 @@ https://github.com/HolyTeamOrg/equationSudokuSolver
 
 Created on Sat Mar  9 11:44:27 2019
 
-@author: TebaPC
+@author: Tebinski
 """
 from numpy import prod
 from itertools import permutations
@@ -40,7 +40,7 @@ def profile(fnc):
 
 
 def factorial(n):
-    
+    """ Funcion que calcula n! """
     return prod(range(1,n+1))
 
 
@@ -66,17 +66,8 @@ def riddle_equation(coef):
     except ZeroDivisionError:
         return float('NaN')
     
-
-def check_coef(coef):
-    
-    """ Para coef comprobamos que el resultado de la ecuacion es 66 """
-    
-    if  riddle_equation(coef) == 66:
-        return True
-    else: 
-        return False
-
-
+""" Definimos el programa main para poder darselo a cProfiler mediante el 
+decorador. """
 @profile
 def main():
     
@@ -84,12 +75,12 @@ def main():
     
     solutions = [] #iniciamos la lista de resultados
     for per in permutations(range(1,10)): 
-        coef = list(per) #TODO: per es un iterador, no lo tengo claro si puedo pasarselo a riddle_equation    
-        if check_coef(coef):
-            solutions.append(coef) 
+        if riddle_equation(per)==66:
+            solutions.append(per) 
+            
     return solutions
 ## MAIN
 ## ===================================================================
-solutions = main()
+sol = main()
 
 
