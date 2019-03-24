@@ -1,0 +1,1 @@
+jupyter nbconvert ./SolFranV.ipynb --output-dir="./results" --output="SolFranV.html"
