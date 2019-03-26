@@ -11,8 +11,3 @@ python:
 		path: nbsphinx
       - method: setuptools
         path: package
-		
-sphinx:
-  builder: html
-  configuration: conf.py
-  fail_on_warning: true
