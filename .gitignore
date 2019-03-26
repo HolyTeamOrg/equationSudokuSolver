@@ -1,5 +1,5 @@
 #sphinx doc
-sphinx_doc/build/*
+docs/build/*
 
 #ignore changes in generated jpynb files
 .ipynb_checkpoints/*
