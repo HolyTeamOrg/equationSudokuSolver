@@ -81,6 +81,8 @@ def main():
     return solutions
 ## MAIN
 ## ===================================================================
-sol = main()
+
+if __name__ == '__main__':
+	sol = main()
 
 
