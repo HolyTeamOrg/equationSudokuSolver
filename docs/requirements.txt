@@ -5,9 +5,3 @@ python:
         path: .
         extra_requirements:
            - docs
-	  - method: pip
-	    path: ipykernel
-	  - method: pip
-		path: nbsphinx
-      - method: setuptools
-        path: package
