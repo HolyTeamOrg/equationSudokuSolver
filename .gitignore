@@ -1,3 +1,6 @@
+#sphinx doc
+sphinx_doc/build/*
+
 #ignore changes in generated jpynb files
 .ipynb_checkpoints/*
 ./jupyter/.ipynb_checkpoints
