@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-Vamos a solucionar el enigma propuesto en 
-https://github.com/HolyTeamOrg/equationSudokuSolver
+Este es el archivo de funciones que hemos creado
 
 Created on Sat Mar  9 11:44:27 2019
 
@@ -18,7 +17,7 @@ def profile(fnc):
     
     """A decorator that uses cProfile to profile a function
 	
-	::params: fnc
+	::args: fnc
 	::outputs: txt file
 	"""
     
@@ -50,20 +49,22 @@ def factorial(n):
 	
 	::args: 	n (int)
 	::outputs: 	integer
-
-	
 	"""
-	if n == 0: 
-		return 1
-	elif n < 0 or isinstance(n, float): 
-		raise ValueError('Not defined factorial of %f . Must input a positive integer' % (n))
+    if n == 0: 
+        return 1
+    elif n < 0 or isinstance(n, float): 
+        raise ValueError(('n must be a positive integer' % (n)))
     else:
-		return prod(range(1,n+1))
+        return prod(range(1,n+1))
 
 
 def riddle_equation(coef):
        
-    """ Calculamos el resultado de esos coeficientes en la ecuacion """
+    """ Calculamos el resultado de esos coeficientes en la ecuacion
+    
+    ::args: lst or tuple of 9 components
+    ::outs: float 
+    """
 
     try:
         eq = (coef[0] + 
@@ -96,10 +97,6 @@ def main():
             solutions.append(per) 
             
     return solutions
-## MAIN
-## ===================================================================
 
-if __name__ == '__main__':
-	sol = main()
 
 

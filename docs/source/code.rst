@@ -1,5 +1,5 @@
 Auto Generated Documentation
 ============================
 
-.. automodule:: primer_intento
+.. automodule:: main
 	:members:
