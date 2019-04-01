@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""! @package docstring
+""" 
 Vamos a solucionar el enigma propuesto en 
 https://github.com/HolyTeamOrg/equationSudokuSolver
 
@@ -13,15 +13,59 @@ from itertools import permutations
 
 import cProfile, pstats, io
 
+def myfunction(arg1, arg2, kwarg='whatever.'):
+    """
+    Does nothing more than demonstrate syntax.
 
+    This is an example of how a Pythonic human-readable docstring can
+    get parsed by doxypypy and marked up with Doxygen commands as a
+    regular input filter to Doxygen.
+
+    Args:
+        arg1:   A positional argument.
+        arg2:   Another positional argument.
+
+    Kwargs:
+        kwarg:  A keyword argument.
+
+    Returns:
+        A string holding the result.
+
+    Raises:
+        ZeroDivisionError, AssertionError, VVValueError.
+
+    Examples:
+        >>> myfunction(2, 3)
+        '5 - 0, whatever.'
+        >>> myfunction(5, 0, 'oops.')
+        Traceback (most recent call last):
+            ...
+        ZeroDivisionError: integer division or modulo by zero
+        >>> myfunction(4, 1, 'got it.')
+        '5 - 4, got it.'
+        >>> myfunction(23.5, 23, 'oh well.')
+        Traceback (most recent call last):
+            ...
+        AssertionError
+        >>> myfunction(5, 50, 'too big.')
+        Traceback (most recent call last):
+            ...
+        ValueError
+    """
+    assert isinstance(arg1, int)
+    if arg2 > 23:
+        raise ValueError
+    return '{0} - {1}, {2}'.format(arg1 + arg2, arg1 / arg2, kwarg)
+	
+	
 def profile(fnc):
     
-    """!
+    """
 	A decorator that uses cProfile to profile a function
 	
-	@parameter fnc
+	parameter fnc
 	
-	@warning esta es nua prueba de warning
+	@warning Esta es nua prueba de warning, queda genial, me encanta
 	"""
     
     def inner(*args, **kwargs):
@@ -46,7 +90,7 @@ def profile(fnc):
 
 
 def factorial(n):
-    """!
+    """
 	Funcion que calcula n!
 	"""
     return prod(range(1,n+1))

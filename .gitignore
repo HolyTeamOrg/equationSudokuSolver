@@ -1,3 +1,7 @@
+#doxygen
+
+_doxygen/doxy_build/*
+
 #ignore changes in generated jpynb files
 .ipynb_checkpoints/*
 ./jupyter/.ipynb_checkpoints
