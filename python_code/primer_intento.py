@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
+"""! @package docstring
 Vamos a solucionar el enigma propuesto en 
 https://github.com/HolyTeamOrg/equationSudokuSolver
 
@@ -16,7 +16,13 @@ import cProfile, pstats, io
 
 def profile(fnc):
     
-    """A decorator that uses cProfile to profile a function"""
+    """!
+	A decorator that uses cProfile to profile a function
+	
+	@parameter fnc
+	
+	@warning esta es nua prueba de warning
+	"""
     
     def inner(*args, **kwargs):
         
@@ -40,7 +46,9 @@ def profile(fnc):
 
 
 def factorial(n):
-    """ Funcion que calcula n! """
+    """!
+	Funcion que calcula n!
+	"""
     return prod(range(1,n+1))
 
 
