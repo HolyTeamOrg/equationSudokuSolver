@@ -14,7 +14,7 @@
 #     name: python3
 # ---
 
-# # Si si prueba Probamos a explicar el codigo en un jupyter notebook
+# # Probamos a explicar el codigo en un jupyter notebook
 
 # ## Constructor de permutaciones
 # Resolveremos cuantas permutaciones sin repeticion posibles hay con los numeros 1,2 y 3:
@@ -130,5 +130,3 @@ len(solution)
 
 for sol in solution:
     print(sol)
-
-

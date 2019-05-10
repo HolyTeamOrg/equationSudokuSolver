@@ -5,3 +5,7 @@
 <img src="./docs/source/_static/desafioEcuacionSudoku.jpg" width="500">
 
 Para ver solucion ir al [jupyter notebook](./jupyter/SolTebinski.ipynb)
+
+## Nota importante
+
+Para el control de versiones de los jupyter notebook, hemos utilizado `jupytext`, configurando nuestro JupyterNotebooks segun [este enlace](https://nextjournal.com/schmudde/how-to-version-control-jupyter)
