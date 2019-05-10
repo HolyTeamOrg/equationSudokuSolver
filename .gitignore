@@ -1,9 +1,11 @@
 #sphinx doc
 docs/build/*
 
+#doxygen folder 
+_doxygen/
+
 #ignore changes in generated jpynb files
-.ipynb_checkpoints/*
-./jupyter/.ipynb_checkpoints
+jupyter/.ipynb_checkpoints/
 
 # Built application files
 *.apk
